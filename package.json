@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css/",
-    "css-watch": "node-sass -w --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css/"
+    "css-watch": "node-sass -w --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css/",
+    "live": "live-server",
+    "watch-debug": "concurrently \"yarn run css-watch\" \"yarn run live\""
   },
   "dependencies": {
     "bootstrap": "^4.4.1"
